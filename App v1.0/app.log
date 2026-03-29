@@ -1,0 +1,992 @@
+2026-02-21 20:07:24,959 - INFO - Application starting
+2026-02-21 20:07:24,959 - INFO - Script directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0
+2026-02-21 20:07:24,959 - INFO - Web directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\web
+2026-02-21 20:07:25,059 - INFO - Looking for model at: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\weights\best.pt
+2026-02-21 20:07:25,252 - INFO - Model loaded successfully
+2026-02-21 20:07:25,764 - DEBUG - Initializing WebSocket
+2026-02-21 20:07:25,764 - DEBUG - Validating WebSocket request
+2026-02-21 20:07:25,769 - INFO - 127.0.0.1 - - [2026-02-21 20:07:25] "GET /index.html HTTP/1.1" 200 4736 0.005137
+2026-02-21 20:07:25,819 - DEBUG - Initializing WebSocket
+2026-02-21 20:07:25,819 - DEBUG - Validating WebSocket request
+2026-02-21 20:07:25,819 - INFO - 127.0.0.1 - - [2026-02-21 20:07:25] "GET /eel.js HTTP/1.1" 200 6048 0.000000
+2026-02-21 20:07:25,828 - DEBUG - Initializing WebSocket
+2026-02-21 20:07:25,828 - DEBUG - Validating WebSocket request
+2026-02-21 20:07:25,833 - INFO - 127.0.0.1 - - [2026-02-21 20:07:25] "GET /script.js HTTP/1.1" 200 4250 0.003437
+2026-02-21 20:07:25,884 - DEBUG - Initializing WebSocket
+2026-02-21 20:07:25,886 - DEBUG - Validating WebSocket request
+2026-02-21 20:07:25,889 - INFO - 127.0.0.1 - - [2026-02-21 20:07:25] "GET /favicon.ico HTTP/1.1" 404 882 0.005235
+2026-02-21 20:07:26,199 - DEBUG - Initializing WebSocket
+2026-02-21 20:07:26,199 - DEBUG - Validating WebSocket request
+2026-02-21 20:07:26,199 - DEBUG - Attempting to upgrade connection
+2026-02-21 20:07:26,199 - DEBUG - WebSocket request accepted, switching protocols
+2026-02-21 20:07:26,204 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-02-21 20:07:43,538 - INFO - Processing image
+2026-02-21 20:07:43,599 - INFO - Image opened successfully: JPEG, (1920, 1080), RGB
+2026-02-21 20:07:44,092 - ERROR - Error processing image: Numpy is not available
+Traceback (most recent call last):
+  File "F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\main.py", line 57, in process_image
+    results = model(image)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\model.py", line 177, in __call__
+    return self.predict(source, stream, **kwargs)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\model.py", line 536, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\predictor.py", line 225, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Results into one
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\_contextlib.py", line 35, in generator_context
+    response = gen.send(None)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\predictor.py", line 326, in stream_inference
+    im = self.preprocess(im0s)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\predictor.py", line 167, in preprocess
+    im = torch.from_numpy(im)
+RuntimeError: Numpy is not available
+2026-02-21 20:07:45,337 - DEBUG - Closed WebSocket
+2026-02-21 20:07:45,337 - DEBUG - Failed to write closing frame -> closing socket
+2026-02-21 20:07:45,337 - DEBUG - Closed WebSocket
+2026-02-21 20:07:46,348 - INFO - Application exiting
+2026-02-22 19:47:55,025 - INFO - Application starting
+2026-02-22 19:47:55,153 - INFO - Script directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0
+2026-02-22 19:47:55,153 - INFO - Web directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\web
+2026-02-22 19:47:55,188 - INFO - Looking for model at: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\weights\best.pt
+2026-02-22 19:47:56,782 - INFO - Model loaded successfully
+2026-02-22 19:47:57,320 - DEBUG - Initializing WebSocket
+2026-02-22 19:47:57,320 - DEBUG - Validating WebSocket request
+2026-02-22 19:47:57,320 - INFO - 127.0.0.1 - - [2026-02-22 19:47:57] "GET /index.html HTTP/1.1" 200 4736 0.000000
+2026-02-22 19:47:57,342 - DEBUG - Initializing WebSocket
+2026-02-22 19:47:57,343 - DEBUG - Validating WebSocket request
+2026-02-22 19:47:57,344 - INFO - 127.0.0.1 - - [2026-02-22 19:47:57] "GET /eel.js HTTP/1.1" 200 6048 0.002320
+2026-02-22 19:47:57,347 - DEBUG - Initializing WebSocket
+2026-02-22 19:47:57,347 - DEBUG - Validating WebSocket request
+2026-02-22 19:47:57,349 - INFO - 127.0.0.1 - - [2026-02-22 19:47:57] "GET /script.js HTTP/1.1" 200 4250 0.001995
+2026-02-22 19:47:57,427 - DEBUG - Initializing WebSocket
+2026-02-22 19:47:57,427 - DEBUG - Validating WebSocket request
+2026-02-22 19:47:57,439 - INFO - 127.0.0.1 - - [2026-02-22 19:47:57] "GET /favicon.ico HTTP/1.1" 404 882 0.012380
+2026-02-22 19:47:57,719 - DEBUG - Initializing WebSocket
+2026-02-22 19:47:57,719 - DEBUG - Validating WebSocket request
+2026-02-22 19:47:57,719 - DEBUG - Attempting to upgrade connection
+2026-02-22 19:47:57,719 - DEBUG - WebSocket request accepted, switching protocols
+2026-02-22 19:47:57,719 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-02-22 19:48:19,722 - INFO - Processing image
+2026-02-22 19:48:19,766 - INFO - Image opened successfully: JPEG, (1660, 1305), RGB
+2026-02-22 19:48:20,373 - ERROR - Error processing image: Numpy is not available
+Traceback (most recent call last):
+  File "F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\main.py", line 57, in process_image
+    results = model(image)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\model.py", line 177, in __call__
+    return self.predict(source, stream, **kwargs)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\model.py", line 536, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\predictor.py", line 225, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Results into one
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\_contextlib.py", line 35, in generator_context
+    response = gen.send(None)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\predictor.py", line 326, in stream_inference
+    im = self.preprocess(im0s)
+  File "C:\Users\Hari\AppData\Local\Programs\Python\Python310\lib\site-packages\ultralytics\engine\predictor.py", line 167, in preprocess
+    im = torch.from_numpy(im)
+RuntimeError: Numpy is not available
+2026-02-22 19:48:27,958 - DEBUG - Closed WebSocket
+2026-02-22 19:48:27,959 - DEBUG - Failed to write closing frame -> closing socket
+2026-02-22 19:48:27,959 - DEBUG - Closed WebSocket
+2026-02-22 19:48:28,969 - INFO - Application exiting
+2026-02-22 19:50:24,859 - INFO - Application starting
+2026-02-22 19:50:24,859 - INFO - Script directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0
+2026-02-22 19:50:24,859 - INFO - Web directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\web
+2026-02-22 19:50:24,917 - INFO - Looking for model at: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\weights\best.pt
+2026-02-22 19:50:26,783 - INFO - Model loaded successfully
+2026-02-22 19:50:27,286 - DEBUG - Initializing WebSocket
+2026-02-22 19:50:27,286 - DEBUG - Validating WebSocket request
+2026-02-22 19:50:27,286 - INFO - 127.0.0.1 - - [2026-02-22 19:50:27] "GET /index.html HTTP/1.1" 200 4736 0.000000
+2026-02-22 19:50:27,329 - DEBUG - Initializing WebSocket
+2026-02-22 19:50:27,329 - DEBUG - Validating WebSocket request
+2026-02-22 19:50:27,331 - INFO - 127.0.0.1 - - [2026-02-22 19:50:27] "GET /eel.js HTTP/1.1" 200 6048 0.001035
+2026-02-22 19:50:27,332 - DEBUG - Initializing WebSocket
+2026-02-22 19:50:27,333 - DEBUG - Validating WebSocket request
+2026-02-22 19:50:27,335 - INFO - 127.0.0.1 - - [2026-02-22 19:50:27] "GET /script.js HTTP/1.1" 200 4250 0.002271
+2026-02-22 19:50:27,683 - DEBUG - Initializing WebSocket
+2026-02-22 19:50:27,683 - DEBUG - Validating WebSocket request
+2026-02-22 19:50:27,683 - DEBUG - Attempting to upgrade connection
+2026-02-22 19:50:27,683 - DEBUG - WebSocket request accepted, switching protocols
+2026-02-22 19:50:27,683 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-02-22 19:50:38,642 - INFO - Processing image
+2026-02-22 19:50:38,657 - INFO - Image opened successfully: JPEG, (1660, 1305), RGB
+2026-02-22 19:50:40,344 - INFO - Model prediction completed
+2026-02-22 19:50:40,344 - INFO - Drew bounding box: 1092.0015869140625, 938.0097045898438, 1267.250732421875, 1116.593994140625, Class 0, Confidence 0.65
+2026-02-22 19:50:40,344 - INFO - Drew bounding box: 1133.7269287109375, 941.4734497070312, 1266.414794921875, 1100.39794921875, Class 0, Confidence 0.43
+2026-02-22 19:50:40,344 - INFO - Drew bounding box: 1089.069580078125, 997.2081909179688, 1220.827880859375, 1116.728515625, Class 0, Confidence 0.32
+2026-02-22 19:50:55,206 - DEBUG - Closed WebSocket
+2026-02-22 19:50:55,206 - DEBUG - Failed to write closing frame -> closing socket
+2026-02-22 19:50:55,206 - DEBUG - Closed WebSocket
+2026-02-22 19:50:56,222 - INFO - Application exiting
+2026-02-22 19:51:17,437 - INFO - Application starting
+2026-02-22 19:51:17,437 - INFO - Script directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0
+2026-02-22 19:51:17,437 - INFO - Web directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\web
+2026-02-22 19:51:17,453 - INFO - Looking for model at: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\weights\best.pt
+2026-02-22 19:51:17,642 - INFO - Model loaded successfully
+2026-02-22 19:51:18,114 - DEBUG - Initializing WebSocket
+2026-02-22 19:51:18,115 - DEBUG - Validating WebSocket request
+2026-02-22 19:51:18,118 - INFO - 127.0.0.1 - - [2026-02-22 19:51:18] "GET /index.html HTTP/1.1" 200 4736 0.003947
+2026-02-22 19:51:18,158 - DEBUG - Initializing WebSocket
+2026-02-22 19:51:18,158 - DEBUG - Validating WebSocket request
+2026-02-22 19:51:18,158 - INFO - 127.0.0.1 - - [2026-02-22 19:51:18] "GET /eel.js HTTP/1.1" 200 6048 0.000000
+2026-02-22 19:51:18,158 - DEBUG - Initializing WebSocket
+2026-02-22 19:51:18,158 - DEBUG - Validating WebSocket request
+2026-02-22 19:51:18,158 - INFO - 127.0.0.1 - - [2026-02-22 19:51:18] "GET /script.js HTTP/1.1" 200 4250 0.000000
+2026-02-22 19:51:18,497 - DEBUG - Initializing WebSocket
+2026-02-22 19:51:18,497 - DEBUG - Validating WebSocket request
+2026-02-22 19:51:18,497 - DEBUG - Attempting to upgrade connection
+2026-02-22 19:51:18,498 - DEBUG - WebSocket request accepted, switching protocols
+2026-02-22 19:51:18,502 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-02-22 19:51:25,087 - INFO - Processing image
+2026-02-22 19:51:25,106 - INFO - Image opened successfully: JPEG, (303, 512), RGB
+2026-02-22 19:51:26,400 - INFO - Model prediction completed
+2026-02-22 19:51:26,403 - INFO - Drew bounding box: 137.39694213867188, 258.06024169921875, 181.20962524414062, 294.50958251953125, Class 6, Confidence 0.25
+2026-02-22 19:51:47,230 - INFO - Processing image
+2026-02-22 19:51:47,231 - INFO - Image opened successfully: JPEG, (479, 512), RGB
+2026-02-22 19:51:48,498 - INFO - Model prediction completed
+2026-02-22 19:51:55,621 - DEBUG - Closed WebSocket
+2026-02-22 19:51:55,621 - DEBUG - Failed to write closing frame -> closing socket
+2026-02-22 19:51:55,622 - DEBUG - Closed WebSocket
+2026-02-22 19:51:56,626 - INFO - Application exiting
+2026-02-22 19:52:04,282 - INFO - Application starting
+2026-02-22 19:52:04,282 - INFO - Script directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0
+2026-02-22 19:52:04,282 - INFO - Web directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\web
+2026-02-22 19:52:04,298 - INFO - Looking for model at: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\weights\best.pt
+2026-02-22 19:52:04,485 - INFO - Model loaded successfully
+2026-02-22 19:52:04,954 - DEBUG - Initializing WebSocket
+2026-02-22 19:52:04,954 - DEBUG - Validating WebSocket request
+2026-02-22 19:52:04,954 - INFO - 127.0.0.1 - - [2026-02-22 19:52:04] "GET /index.html HTTP/1.1" 200 4736 0.000000
+2026-02-22 19:52:04,954 - DEBUG - Initializing WebSocket
+2026-02-22 19:52:04,970 - DEBUG - Validating WebSocket request
+2026-02-22 19:52:04,970 - INFO - 127.0.0.1 - - [2026-02-22 19:52:04] "GET /eel.js HTTP/1.1" 200 6048 0.015620
+2026-02-22 19:52:04,972 - DEBUG - Initializing WebSocket
+2026-02-22 19:52:04,973 - DEBUG - Validating WebSocket request
+2026-02-22 19:52:04,975 - INFO - 127.0.0.1 - - [2026-02-22 19:52:04] "GET /script.js HTTP/1.1" 200 4250 0.003349
+2026-02-22 19:52:05,307 - DEBUG - Initializing WebSocket
+2026-02-22 19:52:05,307 - DEBUG - Validating WebSocket request
+2026-02-22 19:52:05,307 - DEBUG - Attempting to upgrade connection
+2026-02-22 19:52:05,307 - DEBUG - WebSocket request accepted, switching protocols
+2026-02-22 19:52:05,307 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-02-22 19:52:14,092 - INFO - Processing image
+2026-02-22 19:52:14,112 - INFO - Image opened successfully: JPEG, (406, 512), RGB
+2026-02-22 19:52:15,654 - INFO - Model prediction completed
+2026-02-22 19:52:34,884 - INFO - Processing image
+2026-02-22 19:52:34,884 - INFO - Image opened successfully: JPEG, (288, 512), RGB
+2026-02-22 19:52:35,718 - INFO - Model prediction completed
+2026-02-22 19:52:41,203 - DEBUG - Closed WebSocket
+2026-02-22 19:52:41,203 - DEBUG - Failed to write closing frame -> closing socket
+2026-02-22 19:52:41,203 - DEBUG - Closed WebSocket
+2026-02-22 19:52:42,220 - INFO - Application exiting
+2026-02-22 19:53:20,875 - INFO - Application starting
+2026-02-22 19:53:20,875 - INFO - Script directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0
+2026-02-22 19:53:20,875 - INFO - Web directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\web
+2026-02-22 19:53:20,897 - INFO - Looking for model at: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\weights\best.pt
+2026-02-22 19:53:21,079 - INFO - Model loaded successfully
+2026-02-22 19:53:21,550 - DEBUG - Initializing WebSocket
+2026-02-22 19:53:21,551 - DEBUG - Validating WebSocket request
+2026-02-22 19:53:21,555 - INFO - 127.0.0.1 - - [2026-02-22 19:53:21] "GET /index.html HTTP/1.1" 200 4736 0.005038
+2026-02-22 19:53:21,601 - DEBUG - Initializing WebSocket
+2026-02-22 19:53:21,601 - DEBUG - Validating WebSocket request
+2026-02-22 19:53:21,602 - INFO - 127.0.0.1 - - [2026-02-22 19:53:21] "GET /eel.js HTTP/1.1" 200 6048 0.000999
+2026-02-22 19:53:21,604 - DEBUG - Initializing WebSocket
+2026-02-22 19:53:21,604 - DEBUG - Validating WebSocket request
+2026-02-22 19:53:21,606 - INFO - 127.0.0.1 - - [2026-02-22 19:53:21] "GET /script.js HTTP/1.1" 200 4250 0.001996
+2026-02-22 19:53:21,945 - DEBUG - Initializing WebSocket
+2026-02-22 19:53:21,945 - DEBUG - Validating WebSocket request
+2026-02-22 19:53:21,945 - DEBUG - Attempting to upgrade connection
+2026-02-22 19:53:21,945 - DEBUG - WebSocket request accepted, switching protocols
+2026-02-22 19:53:21,945 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-02-22 19:53:49,050 - INFO - Processing image
+2026-02-22 19:53:49,050 - INFO - Image opened successfully: JPEG, (1660, 1305), RGB
+2026-02-22 19:53:50,803 - INFO - Model prediction completed
+2026-02-22 19:53:50,808 - INFO - Drew bounding box: 1092.0015869140625, 938.0097045898438, 1267.250732421875, 1116.593994140625, Class 0, Confidence 0.65
+2026-02-22 19:53:50,808 - INFO - Drew bounding box: 1133.7269287109375, 941.4734497070312, 1266.414794921875, 1100.39794921875, Class 0, Confidence 0.43
+2026-02-22 19:53:50,808 - INFO - Drew bounding box: 1089.069580078125, 997.2081909179688, 1220.827880859375, 1116.728515625, Class 0, Confidence 0.32
+2026-02-22 19:54:07,821 - INFO - Processing image
+2026-02-22 19:54:07,822 - INFO - Image opened successfully: JPEG, (288, 512), RGB
+2026-02-22 19:54:08,610 - INFO - Model prediction completed
+2026-02-22 19:54:23,672 - INFO - Processing image
+2026-02-22 19:54:23,673 - INFO - Image opened successfully: JPEG, (268, 512), RGB
+2026-02-22 19:54:24,510 - INFO - Model prediction completed
+2026-02-22 19:54:29,786 - DEBUG - Closed WebSocket
+2026-02-22 19:54:29,786 - DEBUG - Failed to write closing frame -> closing socket
+2026-02-22 19:54:29,786 - DEBUG - Closed WebSocket
+2026-02-22 19:54:30,805 - INFO - Application exiting
+2026-02-22 19:56:25,097 - INFO - Application starting
+2026-02-22 19:56:25,097 - INFO - Script directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0
+2026-02-22 19:56:25,097 - INFO - Web directory: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\web
+2026-02-22 19:56:25,097 - INFO - Looking for model at: F:\design project 4\x-ray-bone-fracture-detection-app\App v1.0\weights\best.pt
+2026-02-22 19:56:25,280 - INFO - Model loaded successfully
+2026-02-22 19:56:25,775 - DEBUG - Initializing WebSocket
+2026-02-22 19:56:25,776 - DEBUG - Validating WebSocket request
+2026-02-22 19:56:25,779 - INFO - 127.0.0.1 - - [2026-02-22 19:56:25] "GET /index.html HTTP/1.1" 200 4736 0.003988
+2026-02-22 19:56:25,813 - DEBUG - Initializing WebSocket
+2026-02-22 19:56:25,813 - DEBUG - Validating WebSocket request
+2026-02-22 19:56:25,814 - INFO - 127.0.0.1 - - [2026-02-22 19:56:25] "GET /eel.js HTTP/1.1" 200 6048 0.000999
+2026-02-22 19:56:25,816 - DEBUG - Initializing WebSocket
+2026-02-22 19:56:25,816 - DEBUG - Validating WebSocket request
+2026-02-22 19:56:25,818 - INFO - 127.0.0.1 - - [2026-02-22 19:56:25] "GET /script.js HTTP/1.1" 200 4250 0.001994
+2026-02-22 19:56:26,155 - DEBUG - Initializing WebSocket
+2026-02-22 19:56:26,155 - DEBUG - Validating WebSocket request
+2026-02-22 19:56:26,155 - DEBUG - Attempting to upgrade connection
+2026-02-22 19:56:26,155 - DEBUG - WebSocket request accepted, switching protocols
+2026-02-22 19:56:26,155 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-02-22 19:56:35,473 - INFO - Processing image
+2026-02-22 19:56:35,492 - INFO - Image opened successfully: JPEG, (512, 406), RGB
+2026-02-22 19:56:37,001 - INFO - Model prediction completed
+2026-02-22 19:56:37,003 - INFO - Drew bounding box: 189.03619384765625, 147.69329833984375, 216.7801513671875, 172.20013427734375, Class 5, Confidence 0.44
+2026-02-22 19:56:56,450 - DEBUG - Closed WebSocket
+2026-02-22 19:56:56,450 - DEBUG - Failed to write closing frame -> closing socket
+2026-02-22 19:56:56,450 - DEBUG - Closed WebSocket
+2026-02-22 19:56:57,467 - INFO - Application exiting
+2026-03-04 10:36:17,126 - INFO - Application starting
+2026-03-04 10:36:17,126 - INFO - Script directory: E:\bones\App v1.0
+2026-03-04 10:36:17,126 - INFO - Web directory: E:\bones\App v1.0\web
+2026-03-04 10:36:17,188 - INFO - Looking for model at: E:\bones\App v1.0\weights\best.pt
+2026-03-04 10:36:17,448 - INFO - Model loaded successfully
+2026-03-04 10:36:17,962 - DEBUG - Initializing WebSocket
+2026-03-04 10:36:17,962 - DEBUG - Validating WebSocket request
+2026-03-04 10:36:17,970 - INFO - 127.0.0.1 - - [2026-03-04 10:36:17] "GET /index.html HTTP/1.1" 200 4736 0.008084
+2026-03-04 10:36:18,009 - DEBUG - Initializing WebSocket
+2026-03-04 10:36:18,009 - DEBUG - Validating WebSocket request
+2026-03-04 10:36:18,009 - INFO - 127.0.0.1 - - [2026-03-04 10:36:18] "GET /eel.js HTTP/1.1" 200 6048 0.000000
+2026-03-04 10:36:18,024 - DEBUG - Initializing WebSocket
+2026-03-04 10:36:18,024 - DEBUG - Validating WebSocket request
+2026-03-04 10:36:18,024 - INFO - 127.0.0.1 - - [2026-03-04 10:36:18] "GET /script.js HTTP/1.1" 200 4250 0.000000
+2026-03-04 10:36:18,068 - DEBUG - Initializing WebSocket
+2026-03-04 10:36:18,068 - DEBUG - Validating WebSocket request
+2026-03-04 10:36:18,077 - INFO - 127.0.0.1 - - [2026-03-04 10:36:18] "GET /favicon.ico HTTP/1.1" 404 882 0.008902
+2026-03-04 10:36:18,384 - DEBUG - Initializing WebSocket
+2026-03-04 10:36:18,385 - DEBUG - Validating WebSocket request
+2026-03-04 10:36:18,385 - DEBUG - Attempting to upgrade connection
+2026-03-04 10:36:18,385 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-04 10:36:18,385 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-03-04 10:36:27,500 - INFO - Processing image
+2026-03-04 10:36:27,550 - INFO - Image opened successfully: JPEG, (149, 512), RGB
+2026-03-04 10:36:28,575 - INFO - Model prediction completed
+2026-03-04 10:36:28,576 - INFO - Drew bounding box: 38.73932647705078, 255.40106201171875, 95.6634292602539, 323.33660888671875, Class 2, Confidence 0.27
+2026-03-04 10:36:34,581 - DEBUG - Closed WebSocket
+2026-03-04 10:36:34,589 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-04 10:36:34,589 - DEBUG - Closed WebSocket
+2026-03-04 10:36:35,601 - INFO - Application exiting
+2026-03-04 10:39:25,114 - INFO - YOLOv8 model loaded successfully
+2026-03-04 10:39:25,595 - DEBUG - Initializing WebSocket
+2026-03-04 10:39:25,595 - DEBUG - Validating WebSocket request
+2026-03-04 10:39:25,595 - INFO - 127.0.0.1 - - [2026-03-04 10:39:25] "GET /index.html HTTP/1.1" 200 4736 0.000000
+2026-03-04 10:39:25,645 - DEBUG - Initializing WebSocket
+2026-03-04 10:39:25,645 - DEBUG - Validating WebSocket request
+2026-03-04 10:39:25,645 - INFO - 127.0.0.1 - - [2026-03-04 10:39:25] "GET /eel.js HTTP/1.1" 200 6049 0.000000
+2026-03-04 10:39:25,653 - DEBUG - Initializing WebSocket
+2026-03-04 10:39:25,653 - DEBUG - Validating WebSocket request
+2026-03-04 10:39:25,653 - INFO - 127.0.0.1 - - [2026-03-04 10:39:25] "GET /script.js HTTP/1.1" 200 4250 0.000000
+2026-03-04 10:39:26,037 - DEBUG - Initializing WebSocket
+2026-03-04 10:39:26,037 - DEBUG - Validating WebSocket request
+2026-03-04 10:39:26,037 - DEBUG - Attempting to upgrade connection
+2026-03-04 10:39:26,037 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-04 10:39:32,838 - ERROR - Processing error: list index out of range
+Traceback (most recent call last):
+  File "E:\bones\App v1.0\main.py", line 93, in process_image
+    image_data = base64.b64decode(image_data_base64.split(',')[1])
+IndexError: list index out of range
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 489-933-435
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2026 10:44:14] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2026 10:44:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 489-933-435
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 489-933-435
+INFO:werkzeug:127.0.0.1 - - [04/Mar/2026 10:51:22] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'E:\\bones\\App v1.0\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 489-933-435
+INFO:werkzeug: * Detected change in 'E:\\bones\\App v1.0\\main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 489-933-435
+2026-03-04 10:55:49,565 - INFO - Application starting
+2026-03-04 10:55:49,565 - INFO - Script directory: E:\bones\App v1.0
+2026-03-04 10:55:49,565 - INFO - Web directory: E:\bones\App v1.0\web
+2026-03-04 10:55:49,581 - INFO - Looking for model at: E:\bones\App v1.0\weights\best.pt
+2026-03-04 10:55:49,771 - INFO - Model loaded successfully
+2026-03-04 10:55:59,124 - DEBUG - Initializing WebSocket
+2026-03-04 10:55:59,124 - DEBUG - Validating WebSocket request
+2026-03-04 10:55:59,132 - INFO - 127.0.0.1 - - [2026-03-04 10:55:59] "GET /index.html HTTP/1.1" 200 4736 0.007995
+2026-03-04 10:55:59,208 - DEBUG - Initializing WebSocket
+2026-03-04 10:55:59,208 - DEBUG - Validating WebSocket request
+2026-03-04 10:55:59,208 - INFO - 127.0.0.1 - - [2026-03-04 10:55:59] "GET /eel.js HTTP/1.1" 200 6048 0.000000
+2026-03-04 10:55:59,256 - DEBUG - Initializing WebSocket
+2026-03-04 10:55:59,256 - DEBUG - Validating WebSocket request
+2026-03-04 10:55:59,264 - INFO - 127.0.0.1 - - [2026-03-04 10:55:59] "GET /script.js HTTP/1.1" 200 4250 0.007999
+2026-03-04 10:55:59,646 - DEBUG - Initializing WebSocket
+2026-03-04 10:55:59,646 - DEBUG - Validating WebSocket request
+2026-03-04 10:55:59,646 - DEBUG - Attempting to upgrade connection
+2026-03-04 10:55:59,646 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-04 10:55:59,654 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-03-04 10:56:35,533 - INFO - Processing image
+2026-03-04 10:56:35,551 - INFO - Image opened successfully: JPEG, (512, 406), RGB
+2026-03-04 10:56:37,034 - INFO - Model prediction completed
+2026-03-04 10:56:47,764 - INFO - Processing image
+2026-03-04 10:56:47,764 - INFO - Image opened successfully: JPEG, (303, 512), RGB
+2026-03-04 10:56:48,644 - INFO - Model prediction completed
+2026-03-04 10:56:48,644 - INFO - Drew bounding box: 137.39694213867188, 258.06024169921875, 181.20962524414062, 294.50958251953125, Class 6, Confidence 0.25
+2026-03-04 10:57:05,854 - DEBUG - Closed WebSocket
+2026-03-04 10:57:05,854 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-04 10:57:05,854 - DEBUG - Closed WebSocket
+2026-03-04 10:57:06,866 - INFO - Application exiting
+2026-03-09 11:40:44,095 - INFO - Application starting
+2026-03-09 11:40:44,103 - INFO - Script directory: E:\bones\App v1.0
+2026-03-09 11:40:44,103 - INFO - Web directory: E:\bones\App v1.0\web
+2026-03-09 11:40:44,164 - INFO - Looking for model at: E:\bones\App v1.0\weights\best.pt
+2026-03-09 11:40:44,402 - INFO - Model loaded successfully
+2026-03-09 11:40:44,925 - DEBUG - Initializing WebSocket
+2026-03-09 11:40:44,925 - DEBUG - Validating WebSocket request
+2026-03-09 11:40:44,925 - INFO - 127.0.0.1 - - [2026-03-09 11:40:44] "GET /index.html HTTP/1.1" 200 4736 0.000000
+2026-03-09 11:40:44,949 - DEBUG - Initializing WebSocket
+2026-03-09 11:40:44,957 - DEBUG - Validating WebSocket request
+2026-03-09 11:40:44,957 - INFO - 127.0.0.1 - - [2026-03-09 11:40:44] "GET /eel.js HTTP/1.1" 200 6048 0.007999
+2026-03-09 11:40:44,957 - DEBUG - Initializing WebSocket
+2026-03-09 11:40:44,957 - DEBUG - Validating WebSocket request
+2026-03-09 11:40:44,957 - INFO - 127.0.0.1 - - [2026-03-09 11:40:44] "GET /script.js HTTP/1.1" 200 4250 0.000000
+2026-03-09 11:40:45,029 - DEBUG - Initializing WebSocket
+2026-03-09 11:40:45,129 - DEBUG - Validating WebSocket request
+2026-03-09 11:40:45,137 - INFO - 127.0.0.1 - - [2026-03-09 11:40:45] "GET /favicon.ico HTTP/1.1" 404 882 0.108125
+2026-03-09 11:40:45,297 - DEBUG - Initializing WebSocket
+2026-03-09 11:40:45,297 - DEBUG - Validating WebSocket request
+2026-03-09 11:40:45,297 - DEBUG - Attempting to upgrade connection
+2026-03-09 11:40:45,297 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-09 11:40:45,305 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-03-09 11:40:55,508 - INFO - Processing image
+2026-03-09 11:40:55,571 - INFO - Image opened successfully: JPEG, (1660, 1305), RGB
+2026-03-09 11:40:57,239 - INFO - Model prediction completed
+2026-03-09 11:40:57,239 - INFO - Drew bounding box: 1092.0015869140625, 938.0097045898438, 1267.250732421875, 1116.593994140625, Class 0, Confidence 0.65
+2026-03-09 11:40:57,239 - INFO - Drew bounding box: 1133.7269287109375, 941.4734497070312, 1266.414794921875, 1100.39794921875, Class 0, Confidence 0.43
+2026-03-09 11:40:57,239 - INFO - Drew bounding box: 1089.069580078125, 997.2081909179688, 1220.827880859375, 1116.728515625, Class 0, Confidence 0.32
+2026-03-09 11:41:08,146 - DEBUG - Closed WebSocket
+2026-03-09 11:41:08,146 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-09 11:41:08,146 - DEBUG - Closed WebSocket
+2026-03-09 11:41:09,154 - INFO - Application exiting
+2026-03-09 11:46:29,436 - INFO - Application starting
+2026-03-09 11:46:29,436 - INFO - Script directory: E:\bones\App v1.0
+2026-03-09 11:46:29,436 - INFO - Web directory: E:\bones\App v1.0\web
+2026-03-09 11:46:29,468 - INFO - Looking for model at: E:\bones\App v1.0\weights\best.pt
+2026-03-09 11:46:29,698 - INFO - Model loaded successfully
+2026-03-09 11:46:30,242 - DEBUG - Initializing WebSocket
+2026-03-09 11:46:30,242 - DEBUG - Validating WebSocket request
+2026-03-09 11:46:30,242 - INFO - 127.0.0.1 - - [2026-03-09 11:46:30] "GET /index.html HTTP/1.1" 200 4736 0.000000
+2026-03-09 11:46:30,272 - DEBUG - Initializing WebSocket
+2026-03-09 11:46:30,272 - DEBUG - Validating WebSocket request
+2026-03-09 11:46:30,272 - INFO - 127.0.0.1 - - [2026-03-09 11:46:30] "GET /eel.js HTTP/1.1" 200 6048 0.000000
+2026-03-09 11:46:30,272 - DEBUG - Initializing WebSocket
+2026-03-09 11:46:30,272 - DEBUG - Validating WebSocket request
+2026-03-09 11:46:30,272 - INFO - 127.0.0.1 - - [2026-03-09 11:46:30] "GET /script.js HTTP/1.1" 200 4250 0.000000
+2026-03-09 11:46:30,364 - DEBUG - Initializing WebSocket
+2026-03-09 11:46:30,364 - DEBUG - Validating WebSocket request
+2026-03-09 11:46:30,379 - INFO - 127.0.0.1 - - [2026-03-09 11:46:30] "GET /favicon.ico HTTP/1.1" 404 882 0.015182
+2026-03-09 11:46:30,674 - DEBUG - Initializing WebSocket
+2026-03-09 11:46:30,674 - DEBUG - Validating WebSocket request
+2026-03-09 11:46:30,674 - DEBUG - Attempting to upgrade connection
+2026-03-09 11:46:30,674 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-09 11:46:30,674 - INFO - Returning class names: ['elbow positive', 'fingers positive', 'forearm fracture', 'humerus fracture', 'humerus', 'shoulder fracture', 'wrist positive']
+2026-03-09 11:46:41,432 - INFO - Processing image
+2026-03-09 11:46:41,448 - INFO - Image opened successfully: JPEG, (1660, 1305), RGB
+2026-03-09 11:46:43,088 - INFO - Model prediction completed
+2026-03-09 11:46:43,088 - INFO - Drew bounding box: 1092.0015869140625, 938.0097045898438, 1267.250732421875, 1116.593994140625, Class 0, Confidence 0.65
+2026-03-09 11:46:43,088 - INFO - Drew bounding box: 1133.7269287109375, 941.4734497070312, 1266.414794921875, 1100.39794921875, Class 0, Confidence 0.43
+2026-03-09 11:46:43,088 - INFO - Drew bounding box: 1089.069580078125, 997.2081909179688, 1220.827880859375, 1116.728515625, Class 0, Confidence 0.32
+2026-03-09 12:03:37,287 - DEBUG - Closed WebSocket
+2026-03-09 12:03:37,287 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-09 12:03:37,287 - DEBUG - Closed WebSocket
+2026-03-09 12:03:38,297 - INFO - Application exiting
+2026-03-09 12:03:44,163 - INFO - Application starting
+2026-03-09 12:03:44,367 - INFO - Model loaded successfully
+2026-03-09 12:03:45,200 - DEBUG - Initializing WebSocket
+2026-03-09 12:03:45,200 - DEBUG - Validating WebSocket request
+2026-03-09 12:03:45,200 - INFO - 127.0.0.1 - - [2026-03-09 12:03:45] "GET /index.html HTTP/1.1" 200 2317 0.000000
+2026-03-09 12:03:45,232 - DEBUG - Initializing WebSocket
+2026-03-09 12:03:45,232 - DEBUG - Validating WebSocket request
+2026-03-09 12:03:45,232 - INFO - 127.0.0.1 - - [2026-03-09 12:03:45] "GET /eel.js HTTP/1.1" 200 6048 0.000000
+2026-03-09 12:03:45,232 - DEBUG - Initializing WebSocket
+2026-03-09 12:03:45,232 - DEBUG - Validating WebSocket request
+2026-03-09 12:03:45,232 - INFO - 127.0.0.1 - - [2026-03-09 12:03:45] "GET /script.js HTTP/1.1" 200 2991 0.000000
+2026-03-09 12:03:45,288 - DEBUG - Initializing WebSocket
+2026-03-09 12:03:45,288 - DEBUG - Validating WebSocket request
+2026-03-09 12:03:45,296 - INFO - 127.0.0.1 - - [2026-03-09 12:03:45] "GET /favicon.ico HTTP/1.1" 404 882 0.008005
+2026-03-09 12:03:45,591 - DEBUG - Initializing WebSocket
+2026-03-09 12:03:45,591 - DEBUG - Validating WebSocket request
+2026-03-09 12:03:45,591 - DEBUG - Attempting to upgrade connection
+2026-03-09 12:03:45,591 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-09 12:03:56,072 - INFO - Processing image
+2026-03-09 12:04:26,932 - DEBUG - Closed WebSocket
+2026-03-09 12:04:26,932 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-09 12:04:26,932 - DEBUG - Closed WebSocket
+2026-03-09 12:09:30,032 - INFO - Application starting
+2026-03-09 12:09:30,220 - INFO - Model loaded successfully
+2026-03-09 12:09:31,343 - DEBUG - Initializing WebSocket
+2026-03-09 12:09:32,961 - DEBUG - Validating WebSocket request
+2026-03-09 12:09:32,961 - INFO - 127.0.0.1 - - [2026-03-09 12:09:32] "GET /index.html HTTP/1.1" 200 2317 1.617624
+2026-03-09 12:09:33,345 - DEBUG - Initializing WebSocket
+2026-03-09 12:09:33,345 - DEBUG - Validating WebSocket request
+2026-03-09 12:09:33,345 - INFO - 127.0.0.1 - - [2026-03-09 12:09:33] "GET /eel.js HTTP/1.1" 200 6048 0.000000
+2026-03-09 12:09:33,345 - DEBUG - Initializing WebSocket
+2026-03-09 12:09:33,353 - DEBUG - Validating WebSocket request
+2026-03-09 12:09:33,353 - INFO - 127.0.0.1 - - [2026-03-09 12:09:33] "GET /script.js HTTP/1.1" 200 2991 0.008002
+2026-03-09 12:09:33,451 - DEBUG - Initializing WebSocket
+2026-03-09 12:09:33,451 - DEBUG - Validating WebSocket request
+2026-03-09 12:09:33,465 - INFO - 127.0.0.1 - - [2026-03-09 12:09:33] "GET /favicon.ico HTTP/1.1" 404 882 0.014661
+2026-03-09 12:09:33,761 - DEBUG - Initializing WebSocket
+2026-03-09 12:09:33,761 - DEBUG - Validating WebSocket request
+2026-03-09 12:09:33,761 - DEBUG - Attempting to upgrade connection
+2026-03-09 12:09:33,761 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-09 12:09:37,827 - INFO - Processing image
+2026-03-09 12:09:56,900 - INFO - Processing image
+2026-03-09 12:10:04,948 - INFO - Processing image
+2026-03-09 12:10:23,247 - DEBUG - Closed WebSocket
+2026-03-09 12:10:23,247 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-09 12:10:23,247 - DEBUG - Closed WebSocket
+2026-03-15 15:13:12,302 - INFO - Application starting
+2026-03-15 15:13:13,922 - INFO - Model loaded successfully
+2026-03-15 15:13:16,103 - DEBUG - Initializing WebSocket
+2026-03-15 15:13:16,103 - DEBUG - Validating WebSocket request
+2026-03-15 15:13:16,108 - INFO - 127.0.0.1 - - [2026-03-15 15:13:16] "GET /index.html HTTP/1.1" 200 2317 0.005982
+2026-03-15 15:13:16,509 - DEBUG - Initializing WebSocket
+2026-03-15 15:13:16,510 - DEBUG - Validating WebSocket request
+2026-03-15 15:13:16,511 - INFO - 127.0.0.1 - - [2026-03-15 15:13:16] "GET /eel.js HTTP/1.1" 200 6048 0.002040
+2026-03-15 15:13:16,514 - DEBUG - Initializing WebSocket
+2026-03-15 15:13:16,514 - DEBUG - Validating WebSocket request
+2026-03-15 15:13:16,518 - INFO - 127.0.0.1 - - [2026-03-15 15:13:16] "GET /script.js HTTP/1.1" 200 2991 0.004982
+2026-03-15 15:13:16,681 - DEBUG - Initializing WebSocket
+2026-03-15 15:13:16,681 - DEBUG - Validating WebSocket request
+2026-03-15 15:13:16,698 - INFO - 127.0.0.1 - - [2026-03-15 15:13:16] "GET /favicon.ico HTTP/1.1" 404 882 0.016946
+2026-03-15 15:13:16,978 - DEBUG - Initializing WebSocket
+2026-03-15 15:13:16,978 - DEBUG - Validating WebSocket request
+2026-03-15 15:13:16,978 - DEBUG - Attempting to upgrade connection
+2026-03-15 15:13:16,979 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-15 15:13:35,064 - INFO - Processing image
+2026-03-15 15:13:59,796 - INFO - Processing image
+2026-03-15 15:15:09,859 - DEBUG - Closed WebSocket
+2026-03-15 15:15:09,859 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-15 15:15:09,860 - DEBUG - Closed WebSocket
+2026-03-15 16:43:17,934 - INFO - Application starting
+2026-03-15 16:43:18,337 - INFO - Model loaded successfully
+2026-03-15 16:43:19,066 - DEBUG - Initializing WebSocket
+2026-03-15 16:43:19,066 - DEBUG - Validating WebSocket request
+2026-03-15 16:43:19,069 - INFO - 127.0.0.1 - - [2026-03-15 16:43:19] "GET /index.html HTTP/1.1" 200 2317 0.003989
+2026-03-15 16:43:19,111 - DEBUG - Initializing WebSocket
+2026-03-15 16:43:19,112 - DEBUG - Validating WebSocket request
+2026-03-15 16:43:19,112 - INFO - 127.0.0.1 - - [2026-03-15 16:43:19] "GET /eel.js HTTP/1.1" 200 6048 0.000998
+2026-03-15 16:43:19,114 - DEBUG - Initializing WebSocket
+2026-03-15 16:43:19,114 - DEBUG - Validating WebSocket request
+2026-03-15 16:43:19,115 - INFO - 127.0.0.1 - - [2026-03-15 16:43:19] "GET /script.js HTTP/1.1" 200 2991 0.000992
+2026-03-15 16:43:19,274 - DEBUG - Initializing WebSocket
+2026-03-15 16:43:19,274 - DEBUG - Validating WebSocket request
+2026-03-15 16:43:19,282 - INFO - 127.0.0.1 - - [2026-03-15 16:43:19] "GET /favicon.ico HTTP/1.1" 404 882 0.006980
+2026-03-15 16:43:19,604 - DEBUG - Initializing WebSocket
+2026-03-15 16:43:19,605 - DEBUG - Validating WebSocket request
+2026-03-15 16:43:19,605 - DEBUG - Attempting to upgrade connection
+2026-03-15 16:43:19,605 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-15 16:43:51,976 - INFO - Processing image
+2026-03-15 16:50:37,701 - DEBUG - Closed WebSocket
+2026-03-15 16:50:37,702 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-15 16:50:37,703 - DEBUG - Closed WebSocket
+2026-03-16 13:30:21,977 - INFO - Application starting
+2026-03-16 13:30:23,570 - INFO - Model loaded successfully
+2026-03-16 13:30:25,485 - DEBUG - Initializing WebSocket
+2026-03-16 13:30:25,485 - DEBUG - Validating WebSocket request
+2026-03-16 13:30:25,488 - INFO - 127.0.0.1 - - [2026-03-16 13:30:25] "GET /index.html HTTP/1.1" 200 2317 0.001995
+2026-03-16 13:30:25,679 - DEBUG - Initializing WebSocket
+2026-03-16 13:30:25,680 - DEBUG - Validating WebSocket request
+2026-03-16 13:30:25,680 - INFO - 127.0.0.1 - - [2026-03-16 13:30:25] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-16 13:30:25,682 - DEBUG - Initializing WebSocket
+2026-03-16 13:30:25,682 - DEBUG - Validating WebSocket request
+2026-03-16 13:30:25,683 - INFO - 127.0.0.1 - - [2026-03-16 13:30:25] "GET /script.js HTTP/1.1" 200 2991 0.000988
+2026-03-16 13:30:25,733 - DEBUG - Initializing WebSocket
+2026-03-16 13:30:25,733 - DEBUG - Validating WebSocket request
+2026-03-16 13:30:25,746 - INFO - 127.0.0.1 - - [2026-03-16 13:30:25] "GET /favicon.ico HTTP/1.1" 404 882 0.012966
+2026-03-16 13:30:26,044 - DEBUG - Initializing WebSocket
+2026-03-16 13:30:26,044 - DEBUG - Validating WebSocket request
+2026-03-16 13:30:26,044 - DEBUG - Attempting to upgrade connection
+2026-03-16 13:30:26,045 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 13:31:42,211 - INFO - Processing image
+2026-03-16 13:31:57,443 - INFO - Processing image
+2026-03-16 13:32:07,076 - INFO - Processing image
+2026-03-16 13:32:38,914 - DEBUG - Closed WebSocket
+2026-03-16 13:32:38,914 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 13:32:38,914 - DEBUG - Closed WebSocket
+2026-03-16 14:32:49,277 - INFO - Application starting
+2026-03-16 14:32:50,974 - INFO - Model loaded successfully
+2026-03-16 14:32:53,081 - DEBUG - Initializing WebSocket
+2026-03-16 14:32:53,081 - DEBUG - Validating WebSocket request
+2026-03-16 14:32:53,083 - INFO - 127.0.0.1 - - [2026-03-16 14:32:53] "GET /index.html HTTP/1.1" 200 2317 0.001994
+2026-03-16 14:32:53,259 - DEBUG - Initializing WebSocket
+2026-03-16 14:32:53,259 - DEBUG - Validating WebSocket request
+2026-03-16 14:32:53,260 - INFO - 127.0.0.1 - - [2026-03-16 14:32:53] "GET /eel.js HTTP/1.1" 200 6048 0.000996
+2026-03-16 14:32:53,261 - DEBUG - Initializing WebSocket
+2026-03-16 14:32:53,261 - DEBUG - Validating WebSocket request
+2026-03-16 14:32:53,262 - INFO - 127.0.0.1 - - [2026-03-16 14:32:53] "GET /script.js HTTP/1.1" 200 2991 0.000998
+2026-03-16 14:32:53,336 - DEBUG - Initializing WebSocket
+2026-03-16 14:32:53,336 - DEBUG - Validating WebSocket request
+2026-03-16 14:32:53,348 - INFO - 127.0.0.1 - - [2026-03-16 14:32:53] "GET /favicon.ico HTTP/1.1" 404 882 0.012966
+2026-03-16 14:32:53,642 - DEBUG - Initializing WebSocket
+2026-03-16 14:32:53,642 - DEBUG - Validating WebSocket request
+2026-03-16 14:32:53,642 - DEBUG - Attempting to upgrade connection
+2026-03-16 14:32:53,642 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 14:33:00,735 - INFO - Processing image
+2026-03-16 14:33:09,032 - INFO - Processing image
+2026-03-16 14:33:23,111 - DEBUG - Closed WebSocket
+2026-03-16 14:33:23,112 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 14:33:23,112 - DEBUG - Closed WebSocket
+2026-03-16 14:33:41,672 - INFO - Application starting
+2026-03-16 14:33:41,912 - INFO - Model loaded successfully
+2026-03-16 14:33:43,087 - DEBUG - Initializing WebSocket
+2026-03-16 14:33:43,087 - DEBUG - Validating WebSocket request
+2026-03-16 14:33:43,089 - INFO - 127.0.0.1 - - [2026-03-16 14:33:43] "GET /index.html HTTP/1.1" 200 2317 0.001995
+2026-03-16 14:33:43,237 - DEBUG - Initializing WebSocket
+2026-03-16 14:33:43,237 - DEBUG - Validating WebSocket request
+2026-03-16 14:33:43,238 - INFO - 127.0.0.1 - - [2026-03-16 14:33:43] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-16 14:33:43,239 - DEBUG - Initializing WebSocket
+2026-03-16 14:33:43,239 - DEBUG - Validating WebSocket request
+2026-03-16 14:33:43,240 - INFO - 127.0.0.1 - - [2026-03-16 14:33:43] "GET /script.js HTTP/1.1" 200 2991 0.000998
+2026-03-16 14:33:43,311 - DEBUG - Initializing WebSocket
+2026-03-16 14:33:43,311 - DEBUG - Validating WebSocket request
+2026-03-16 14:33:43,323 - INFO - 127.0.0.1 - - [2026-03-16 14:33:43] "GET /favicon.ico HTTP/1.1" 404 882 0.012965
+2026-03-16 14:33:43,603 - DEBUG - Initializing WebSocket
+2026-03-16 14:33:43,693 - DEBUG - Validating WebSocket request
+2026-03-16 14:33:43,693 - DEBUG - Attempting to upgrade connection
+2026-03-16 14:33:43,693 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 14:33:56,916 - INFO - Processing image
+2026-03-16 14:34:05,821 - INFO - Processing image
+2026-03-16 14:34:15,792 - INFO - Processing image
+2026-03-16 14:34:21,887 - DEBUG - Closed WebSocket
+2026-03-16 14:34:21,887 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 14:34:21,887 - DEBUG - Closed WebSocket
+2026-03-16 14:34:33,073 - INFO - Application starting
+2026-03-16 14:34:33,341 - INFO - Model loaded successfully
+2026-03-16 14:34:34,747 - DEBUG - Initializing WebSocket
+2026-03-16 14:34:34,747 - DEBUG - Validating WebSocket request
+2026-03-16 14:34:34,749 - INFO - 127.0.0.1 - - [2026-03-16 14:34:34] "GET /index.html HTTP/1.1" 200 2317 0.001994
+2026-03-16 14:34:34,949 - DEBUG - Initializing WebSocket
+2026-03-16 14:34:34,949 - DEBUG - Validating WebSocket request
+2026-03-16 14:34:34,950 - INFO - 127.0.0.1 - - [2026-03-16 14:34:34] "GET /eel.js HTTP/1.1" 200 6048 0.000998
+2026-03-16 14:34:34,964 - DEBUG - Initializing WebSocket
+2026-03-16 14:34:34,964 - DEBUG - Validating WebSocket request
+2026-03-16 14:34:34,966 - INFO - 127.0.0.1 - - [2026-03-16 14:34:34] "GET /script.js HTTP/1.1" 200 2991 0.001995
+2026-03-16 14:34:35,064 - DEBUG - Initializing WebSocket
+2026-03-16 14:34:35,065 - DEBUG - Validating WebSocket request
+2026-03-16 14:34:35,076 - INFO - 127.0.0.1 - - [2026-03-16 14:34:35] "GET /favicon.ico HTTP/1.1" 404 882 0.011970
+2026-03-16 14:34:35,372 - DEBUG - Initializing WebSocket
+2026-03-16 14:34:35,373 - DEBUG - Validating WebSocket request
+2026-03-16 14:34:35,373 - DEBUG - Attempting to upgrade connection
+2026-03-16 14:34:35,373 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 14:35:10,573 - INFO - Processing image
+2026-03-16 14:35:23,155 - INFO - Processing image
+2026-03-16 14:37:00,914 - DEBUG - Closed WebSocket
+2026-03-16 14:37:00,915 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 14:37:00,915 - DEBUG - Closed WebSocket
+2026-03-16 14:37:21,196 - INFO - Application starting
+2026-03-16 14:37:21,459 - INFO - Model loaded successfully
+2026-03-16 14:37:22,757 - DEBUG - Initializing WebSocket
+2026-03-16 14:37:22,757 - DEBUG - Validating WebSocket request
+2026-03-16 14:37:22,759 - INFO - 127.0.0.1 - - [2026-03-16 14:37:22] "GET /index.html HTTP/1.1" 200 2317 0.000996
+2026-03-16 14:37:23,145 - DEBUG - Initializing WebSocket
+2026-03-16 14:37:23,145 - DEBUG - Validating WebSocket request
+2026-03-16 14:37:23,146 - INFO - 127.0.0.1 - - [2026-03-16 14:37:23] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-16 14:37:23,147 - DEBUG - Initializing WebSocket
+2026-03-16 14:37:23,148 - DEBUG - Validating WebSocket request
+2026-03-16 14:37:23,149 - INFO - 127.0.0.1 - - [2026-03-16 14:37:23] "GET /script.js HTTP/1.1" 200 2991 0.001995
+2026-03-16 14:37:23,232 - DEBUG - Initializing WebSocket
+2026-03-16 14:37:23,232 - DEBUG - Validating WebSocket request
+2026-03-16 14:37:23,246 - INFO - 127.0.0.1 - - [2026-03-16 14:37:23] "GET /favicon.ico HTTP/1.1" 404 882 0.012965
+2026-03-16 14:37:23,529 - DEBUG - Initializing WebSocket
+2026-03-16 14:37:23,650 - DEBUG - Validating WebSocket request
+2026-03-16 14:37:23,650 - DEBUG - Attempting to upgrade connection
+2026-03-16 14:37:23,650 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 14:38:19,487 - INFO - Processing image
+2026-03-16 14:39:47,350 - INFO - Processing image
+2026-03-16 14:40:27,343 - INFO - Processing image
+2026-03-16 14:41:42,040 - INFO - Processing image
+2026-03-16 14:41:55,742 - DEBUG - Closed WebSocket
+2026-03-16 14:41:55,743 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 14:41:55,743 - DEBUG - Closed WebSocket
+2026-03-16 14:42:06,298 - INFO - Application starting
+2026-03-16 14:42:06,574 - INFO - Model loaded successfully
+2026-03-16 14:42:07,755 - DEBUG - Initializing WebSocket
+2026-03-16 14:42:07,755 - DEBUG - Validating WebSocket request
+2026-03-16 14:42:07,757 - INFO - 127.0.0.1 - - [2026-03-16 14:42:07] "GET /index.html HTTP/1.1" 200 2317 0.001995
+2026-03-16 14:42:07,891 - DEBUG - Initializing WebSocket
+2026-03-16 14:42:07,891 - DEBUG - Validating WebSocket request
+2026-03-16 14:42:07,892 - INFO - 127.0.0.1 - - [2026-03-16 14:42:07] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-16 14:42:07,893 - DEBUG - Initializing WebSocket
+2026-03-16 14:42:07,893 - DEBUG - Validating WebSocket request
+2026-03-16 14:42:07,894 - INFO - 127.0.0.1 - - [2026-03-16 14:42:07] "GET /script.js HTTP/1.1" 200 2991 0.000999
+2026-03-16 14:42:07,964 - DEBUG - Initializing WebSocket
+2026-03-16 14:42:07,964 - DEBUG - Validating WebSocket request
+2026-03-16 14:42:07,976 - INFO - 127.0.0.1 - - [2026-03-16 14:42:07] "GET /favicon.ico HTTP/1.1" 404 882 0.011971
+2026-03-16 14:42:08,261 - DEBUG - Initializing WebSocket
+2026-03-16 14:42:08,261 - DEBUG - Validating WebSocket request
+2026-03-16 14:42:08,262 - DEBUG - Attempting to upgrade connection
+2026-03-16 14:42:08,262 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 14:42:15,477 - INFO - Processing image
+2026-03-16 14:42:24,557 - INFO - Processing image
+2026-03-16 14:42:39,007 - INFO - Processing image
+2026-03-16 14:42:56,055 - INFO - Processing image
+2026-03-16 14:43:16,286 - DEBUG - Closed WebSocket
+2026-03-16 14:43:16,287 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 14:43:16,287 - DEBUG - Closed WebSocket
+2026-03-16 14:47:58,937 - INFO - Application starting
+2026-03-16 14:47:59,163 - INFO - Model loaded successfully
+2026-03-16 14:48:00,528 - DEBUG - Initializing WebSocket
+2026-03-16 14:48:00,528 - DEBUG - Validating WebSocket request
+2026-03-16 14:48:00,529 - INFO - 127.0.0.1 - - [2026-03-16 14:48:00] "GET /index.html HTTP/1.1" 200 2317 0.001994
+2026-03-16 14:48:00,571 - DEBUG - Initializing WebSocket
+2026-03-16 14:48:00,571 - DEBUG - Validating WebSocket request
+2026-03-16 14:48:00,572 - INFO - 127.0.0.1 - - [2026-03-16 14:48:00] "GET /eel.js HTTP/1.1" 200 6048 0.000998
+2026-03-16 14:48:00,575 - DEBUG - Initializing WebSocket
+2026-03-16 14:48:00,575 - DEBUG - Validating WebSocket request
+2026-03-16 14:48:00,576 - INFO - 127.0.0.1 - - [2026-03-16 14:48:00] "GET /script.js HTTP/1.1" 200 2991 0.000998
+2026-03-16 14:48:00,674 - DEBUG - Initializing WebSocket
+2026-03-16 14:48:00,675 - DEBUG - Validating WebSocket request
+2026-03-16 14:48:00,684 - INFO - 127.0.0.1 - - [2026-03-16 14:48:00] "GET /favicon.ico HTTP/1.1" 404 882 0.009972
+2026-03-16 14:48:00,942 - DEBUG - Initializing WebSocket
+2026-03-16 14:48:00,942 - DEBUG - Validating WebSocket request
+2026-03-16 14:48:00,942 - DEBUG - Attempting to upgrade connection
+2026-03-16 14:48:00,942 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 15:25:47,975 - INFO - Processing image
+2026-03-16 15:30:22,951 - INFO - Processing image
+2026-03-16 15:30:27,216 - DEBUG - Closed WebSocket
+2026-03-16 15:30:27,217 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 15:30:27,217 - DEBUG - Closed WebSocket
+2026-03-16 15:30:52,639 - INFO - Application starting
+2026-03-16 15:30:53,142 - INFO - Model loaded successfully
+2026-03-16 15:30:53,812 - DEBUG - Initializing WebSocket
+2026-03-16 15:30:53,812 - DEBUG - Validating WebSocket request
+2026-03-16 15:30:53,814 - INFO - 127.0.0.1 - - [2026-03-16 15:30:53] "GET /index.html HTTP/1.1" 200 2317 0.001997
+2026-03-16 15:30:53,832 - DEBUG - Initializing WebSocket
+2026-03-16 15:30:53,832 - DEBUG - Validating WebSocket request
+2026-03-16 15:30:53,833 - INFO - 127.0.0.1 - - [2026-03-16 15:30:53] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-16 15:30:53,834 - DEBUG - Initializing WebSocket
+2026-03-16 15:30:53,835 - DEBUG - Validating WebSocket request
+2026-03-16 15:30:53,836 - INFO - 127.0.0.1 - - [2026-03-16 15:30:53] "GET /script.js HTTP/1.1" 200 2991 0.001994
+2026-03-16 15:30:53,915 - DEBUG - Initializing WebSocket
+2026-03-16 15:30:53,915 - DEBUG - Validating WebSocket request
+2026-03-16 15:30:53,931 - INFO - 127.0.0.1 - - [2026-03-16 15:30:53] "GET /favicon.ico HTTP/1.1" 404 882 0.015958
+2026-03-16 15:30:54,206 - DEBUG - Initializing WebSocket
+2026-03-16 15:30:54,206 - DEBUG - Validating WebSocket request
+2026-03-16 15:30:54,206 - DEBUG - Attempting to upgrade connection
+2026-03-16 15:30:54,206 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 15:30:58,261 - INFO - Processing image
+2026-03-16 15:32:47,528 - DEBUG - Closed WebSocket
+2026-03-16 15:32:47,529 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 15:32:47,529 - DEBUG - Closed WebSocket
+2026-03-16 15:33:15,520 - INFO - Application starting
+2026-03-16 15:33:16,092 - INFO - Model loaded successfully
+2026-03-16 15:33:16,782 - DEBUG - Initializing WebSocket
+2026-03-16 15:33:16,782 - DEBUG - Validating WebSocket request
+2026-03-16 15:33:16,784 - INFO - 127.0.0.1 - - [2026-03-16 15:33:16] "GET /index.html HTTP/1.1" 200 2317 0.001997
+2026-03-16 15:33:16,812 - DEBUG - Initializing WebSocket
+2026-03-16 15:33:16,812 - DEBUG - Validating WebSocket request
+2026-03-16 15:33:16,813 - INFO - 127.0.0.1 - - [2026-03-16 15:33:16] "GET /eel.js HTTP/1.1" 200 6048 0.000996
+2026-03-16 15:33:16,817 - DEBUG - Initializing WebSocket
+2026-03-16 15:33:16,817 - DEBUG - Validating WebSocket request
+2026-03-16 15:33:16,818 - INFO - 127.0.0.1 - - [2026-03-16 15:33:16] "GET /script.js HTTP/1.1" 200 2991 0.000997
+2026-03-16 15:33:17,250 - DEBUG - Initializing WebSocket
+2026-03-16 15:33:17,250 - DEBUG - Validating WebSocket request
+2026-03-16 15:33:17,250 - DEBUG - Attempting to upgrade connection
+2026-03-16 15:33:17,251 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 15:33:24,100 - INFO - Processing image
+2026-03-16 15:33:24,125 - DEBUG - Importing AvifImagePlugin
+2026-03-16 15:33:24,191 - DEBUG - Importing BlpImagePlugin
+2026-03-16 15:33:24,194 - DEBUG - Importing BmpImagePlugin
+2026-03-16 15:33:24,194 - DEBUG - Importing BufrStubImagePlugin
+2026-03-16 15:33:24,196 - DEBUG - Importing CurImagePlugin
+2026-03-16 15:33:24,198 - DEBUG - Importing DcxImagePlugin
+2026-03-16 15:33:24,202 - DEBUG - Importing DdsImagePlugin
+2026-03-16 15:33:24,213 - DEBUG - Importing EpsImagePlugin
+2026-03-16 15:33:24,215 - DEBUG - Importing FitsImagePlugin
+2026-03-16 15:33:24,218 - DEBUG - Importing FliImagePlugin
+2026-03-16 15:33:24,220 - DEBUG - Importing FpxImagePlugin
+2026-03-16 15:33:24,222 - DEBUG - Image: failed to import FpxImagePlugin: No module named 'olefile'
+2026-03-16 15:33:24,222 - DEBUG - Importing FtexImagePlugin
+2026-03-16 15:33:24,224 - DEBUG - Importing GbrImagePlugin
+2026-03-16 15:33:24,226 - DEBUG - Importing GifImagePlugin
+2026-03-16 15:33:24,227 - DEBUG - Importing GribStubImagePlugin
+2026-03-16 15:33:24,229 - DEBUG - Importing Hdf5StubImagePlugin
+2026-03-16 15:33:24,230 - DEBUG - Importing IcnsImagePlugin
+2026-03-16 15:33:24,236 - DEBUG - Importing IcoImagePlugin
+2026-03-16 15:33:24,239 - DEBUG - Importing ImImagePlugin
+2026-03-16 15:33:24,241 - DEBUG - Importing ImtImagePlugin
+2026-03-16 15:33:24,243 - DEBUG - Importing IptcImagePlugin
+2026-03-16 15:33:24,245 - DEBUG - Importing JpegImagePlugin
+2026-03-16 15:33:24,245 - DEBUG - Importing Jpeg2KImagePlugin
+2026-03-16 15:33:24,245 - DEBUG - Importing McIdasImagePlugin
+2026-03-16 15:33:24,246 - DEBUG - Importing MicImagePlugin
+2026-03-16 15:33:24,248 - DEBUG - Image: failed to import MicImagePlugin: No module named 'olefile'
+2026-03-16 15:33:24,248 - DEBUG - Importing MpegImagePlugin
+2026-03-16 15:33:24,249 - DEBUG - Importing MpoImagePlugin
+2026-03-16 15:33:24,253 - DEBUG - Importing MspImagePlugin
+2026-03-16 15:33:24,255 - DEBUG - Importing PalmImagePlugin
+2026-03-16 15:33:24,256 - DEBUG - Importing PcdImagePlugin
+2026-03-16 15:33:24,258 - DEBUG - Importing PcxImagePlugin
+2026-03-16 15:33:24,258 - DEBUG - Importing PdfImagePlugin
+2026-03-16 15:33:24,270 - DEBUG - Importing PixarImagePlugin
+2026-03-16 15:33:24,272 - DEBUG - Importing PngImagePlugin
+2026-03-16 15:33:24,272 - DEBUG - Importing PpmImagePlugin
+2026-03-16 15:33:24,272 - DEBUG - Importing PsdImagePlugin
+2026-03-16 15:33:24,273 - DEBUG - Importing QoiImagePlugin
+2026-03-16 15:33:24,275 - DEBUG - Importing SgiImagePlugin
+2026-03-16 15:33:24,277 - DEBUG - Importing SpiderImagePlugin
+2026-03-16 15:33:24,279 - DEBUG - Importing SunImagePlugin
+2026-03-16 15:33:24,280 - DEBUG - Importing TgaImagePlugin
+2026-03-16 15:33:24,282 - DEBUG - Importing TiffImagePlugin
+2026-03-16 15:33:24,282 - DEBUG - Importing WebPImagePlugin
+2026-03-16 15:33:24,310 - DEBUG - Importing WmfImagePlugin
+2026-03-16 15:33:24,312 - DEBUG - Importing XbmImagePlugin
+2026-03-16 15:33:24,314 - DEBUG - Importing XpmImagePlugin
+2026-03-16 15:33:24,316 - DEBUG - Importing XVThumbImagePlugin
+2026-03-16 15:33:33,796 - DEBUG - Closed WebSocket
+2026-03-16 15:33:33,797 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 15:33:33,797 - DEBUG - Closed WebSocket
+2026-03-16 15:36:46,112 - INFO - Application starting
+2026-03-16 15:36:46,415 - INFO - Model loaded successfully
+2026-03-16 15:36:48,538 - DEBUG - Initializing WebSocket
+2026-03-16 15:36:48,538 - DEBUG - Validating WebSocket request
+2026-03-16 15:36:48,540 - INFO - 127.0.0.1 - - [2026-03-16 15:36:48] "GET /index.html HTTP/1.1" 200 2317 0.001997
+2026-03-16 15:36:48,560 - DEBUG - Initializing WebSocket
+2026-03-16 15:36:48,560 - DEBUG - Validating WebSocket request
+2026-03-16 15:36:48,561 - INFO - 127.0.0.1 - - [2026-03-16 15:36:48] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-16 15:36:48,562 - DEBUG - Initializing WebSocket
+2026-03-16 15:36:48,562 - DEBUG - Validating WebSocket request
+2026-03-16 15:36:48,564 - INFO - 127.0.0.1 - - [2026-03-16 15:36:48] "GET /script.js HTTP/1.1" 200 2991 0.001995
+2026-03-16 15:36:48,944 - DEBUG - Initializing WebSocket
+2026-03-16 15:36:48,944 - DEBUG - Validating WebSocket request
+2026-03-16 15:36:48,944 - DEBUG - Attempting to upgrade connection
+2026-03-16 15:36:48,944 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 15:36:56,937 - INFO - Processing image
+2026-03-16 15:37:08,458 - DEBUG - Closed WebSocket
+2026-03-16 15:37:08,459 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 15:37:08,459 - DEBUG - Closed WebSocket
+2026-03-16 15:37:35,465 - INFO - Application starting
+2026-03-16 15:37:35,849 - INFO - Model loaded successfully
+2026-03-16 15:37:36,430 - DEBUG - Initializing WebSocket
+2026-03-16 15:37:36,579 - DEBUG - Validating WebSocket request
+2026-03-16 15:37:36,581 - INFO - 127.0.0.1 - - [2026-03-16 15:37:36] "GET /index.html HTTP/1.1" 200 2317 0.151594
+2026-03-16 15:37:36,598 - DEBUG - Initializing WebSocket
+2026-03-16 15:37:36,598 - DEBUG - Validating WebSocket request
+2026-03-16 15:37:36,599 - INFO - 127.0.0.1 - - [2026-03-16 15:37:36] "GET /eel.js HTTP/1.1" 200 6048 0.000996
+2026-03-16 15:37:36,603 - DEBUG - Initializing WebSocket
+2026-03-16 15:37:36,603 - DEBUG - Validating WebSocket request
+2026-03-16 15:37:36,604 - INFO - 127.0.0.1 - - [2026-03-16 15:37:36] "GET /script.js HTTP/1.1" 200 2991 0.000999
+2026-03-16 15:37:36,968 - DEBUG - Initializing WebSocket
+2026-03-16 15:37:36,968 - DEBUG - Validating WebSocket request
+2026-03-16 15:37:36,968 - DEBUG - Attempting to upgrade connection
+2026-03-16 15:37:36,969 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 15:37:41,379 - INFO - Processing image
+2026-03-16 18:10:22,964 - INFO - Application starting
+2026-03-16 18:10:24,648 - INFO - Model loaded successfully
+2026-03-16 18:10:26,416 - DEBUG - Initializing WebSocket
+2026-03-16 18:10:26,417 - DEBUG - Validating WebSocket request
+2026-03-16 18:10:26,420 - INFO - 127.0.0.1 - - [2026-03-16 18:10:26] "GET /index.html HTTP/1.1" 200 2317 0.002991
+2026-03-16 18:10:27,152 - DEBUG - Initializing WebSocket
+2026-03-16 18:10:27,152 - DEBUG - Validating WebSocket request
+2026-03-16 18:10:27,153 - INFO - 127.0.0.1 - - [2026-03-16 18:10:27] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-16 18:10:27,157 - DEBUG - Initializing WebSocket
+2026-03-16 18:10:27,157 - DEBUG - Validating WebSocket request
+2026-03-16 18:10:27,158 - INFO - 127.0.0.1 - - [2026-03-16 18:10:27] "GET /script.js HTTP/1.1" 200 2991 0.000998
+2026-03-16 18:10:27,271 - DEBUG - Initializing WebSocket
+2026-03-16 18:10:27,272 - DEBUG - Validating WebSocket request
+2026-03-16 18:10:27,277 - INFO - 127.0.0.1 - - [2026-03-16 18:10:27] "GET /favicon.ico HTTP/1.1" 404 882 0.005982
+2026-03-16 18:10:27,488 - DEBUG - Initializing WebSocket
+2026-03-16 18:10:27,488 - DEBUG - Validating WebSocket request
+2026-03-16 18:10:27,488 - DEBUG - Attempting to upgrade connection
+2026-03-16 18:10:27,488 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-16 18:10:35,740 - DEBUG - Closed WebSocket
+2026-03-16 18:10:35,741 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-16 18:10:35,741 - DEBUG - Closed WebSocket
+2026-03-19 18:03:35,881 - INFO - Application starting
+2026-03-19 18:03:36,348 - INFO - Model loaded successfully
+2026-03-19 18:03:36,870 - DEBUG - Initializing WebSocket
+2026-03-19 18:03:36,871 - DEBUG - Validating WebSocket request
+2026-03-19 18:03:36,877 - INFO - 127.0.0.1 - - [2026-03-19 18:03:36] "GET /index.html HTTP/1.1" 200 2317 0.004440
+2026-03-19 18:03:36,901 - DEBUG - Initializing WebSocket
+2026-03-19 18:03:36,902 - DEBUG - Validating WebSocket request
+2026-03-19 18:03:36,904 - INFO - 127.0.0.1 - - [2026-03-19 18:03:36] "GET /eel.js HTTP/1.1" 200 6048 0.001994
+2026-03-19 18:03:36,905 - DEBUG - Initializing WebSocket
+2026-03-19 18:03:36,906 - DEBUG - Validating WebSocket request
+2026-03-19 18:03:36,907 - INFO - 127.0.0.1 - - [2026-03-19 18:03:36] "GET /script.js HTTP/1.1" 200 2991 0.002002
+2026-03-19 18:03:36,963 - DEBUG - Initializing WebSocket
+2026-03-19 18:03:36,964 - DEBUG - Validating WebSocket request
+2026-03-19 18:03:36,969 - INFO - 127.0.0.1 - - [2026-03-19 18:03:36] "GET /favicon.ico HTTP/1.1" 404 882 0.005983
+2026-03-19 18:03:37,269 - DEBUG - Initializing WebSocket
+2026-03-19 18:03:37,269 - DEBUG - Validating WebSocket request
+2026-03-19 18:03:37,270 - DEBUG - Attempting to upgrade connection
+2026-03-19 18:03:37,270 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-19 18:04:59,169 - DEBUG - Closed WebSocket
+2026-03-19 18:04:59,170 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-19 18:04:59,170 - DEBUG - Closed WebSocket
+2026-03-25 15:09:44,025 - INFO - Application starting
+2026-03-25 15:09:44,603 - INFO - Model loaded successfully
+2026-03-25 15:09:45,820 - DEBUG - Initializing WebSocket
+2026-03-25 15:09:45,820 - DEBUG - Validating WebSocket request
+2026-03-25 15:09:45,823 - INFO - 127.0.0.1 - - [2026-03-25 15:09:45] "GET /index.html HTTP/1.1" 200 2317 0.002991
+2026-03-25 15:09:46,027 - DEBUG - Initializing WebSocket
+2026-03-25 15:09:46,027 - DEBUG - Validating WebSocket request
+2026-03-25 15:09:46,028 - INFO - 127.0.0.1 - - [2026-03-25 15:09:46] "GET /eel.js HTTP/1.1" 200 6048 0.000995
+2026-03-25 15:09:46,029 - DEBUG - Initializing WebSocket
+2026-03-25 15:09:46,029 - DEBUG - Validating WebSocket request
+2026-03-25 15:09:46,030 - INFO - 127.0.0.1 - - [2026-03-25 15:09:46] "GET /script.js HTTP/1.1" 200 2991 0.000998
+2026-03-25 15:09:46,402 - DEBUG - Initializing WebSocket
+2026-03-25 15:09:46,402 - DEBUG - Validating WebSocket request
+2026-03-25 15:09:46,403 - DEBUG - Attempting to upgrade connection
+2026-03-25 15:09:46,403 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-25 15:09:46,463 - DEBUG - Initializing WebSocket
+2026-03-25 15:09:46,463 - DEBUG - Validating WebSocket request
+2026-03-25 15:09:46,470 - INFO - 127.0.0.1 - - [2026-03-25 15:09:46] "GET /favicon.ico HTTP/1.1" 404 882 0.005984
+2026-03-25 15:13:49,698 - INFO - Processing image
+2026-03-25 15:14:16,794 - DEBUG - Closed WebSocket
+2026-03-25 15:14:16,795 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-25 15:14:16,795 - DEBUG - Closed WebSocket
+2026-03-25 15:14:53,558 - INFO - Application starting
+2026-03-25 15:14:53,789 - INFO - Model loaded successfully
+2026-03-25 15:14:54,276 - DEBUG - Initializing WebSocket
+2026-03-25 15:14:54,276 - DEBUG - Validating WebSocket request
+2026-03-25 15:14:54,280 - INFO - 127.0.0.1 - - [2026-03-25 15:14:54] "GET /index.html HTTP/1.1" 200 2317 0.004988
+2026-03-25 15:14:54,320 - DEBUG - Initializing WebSocket
+2026-03-25 15:14:54,320 - DEBUG - Validating WebSocket request
+2026-03-25 15:14:54,322 - INFO - 127.0.0.1 - - [2026-03-25 15:14:54] "GET /eel.js HTTP/1.1" 200 6048 0.001997
+2026-03-25 15:14:54,325 - DEBUG - Initializing WebSocket
+2026-03-25 15:14:54,326 - DEBUG - Validating WebSocket request
+2026-03-25 15:14:54,329 - INFO - 127.0.0.1 - - [2026-03-25 15:14:54] "GET /script.js HTTP/1.1" 200 2991 0.002993
+2026-03-25 15:14:54,692 - DEBUG - Initializing WebSocket
+2026-03-25 15:14:54,693 - DEBUG - Validating WebSocket request
+2026-03-25 15:14:54,693 - DEBUG - Attempting to upgrade connection
+2026-03-25 15:14:54,693 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-25 15:16:25,786 - INFO - Processing image
+2026-03-25 15:18:07,129 - DEBUG - Closed WebSocket
+2026-03-25 15:18:07,129 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-25 15:18:07,130 - DEBUG - Closed WebSocket
+2026-03-25 15:18:16,914 - INFO - Application starting
+2026-03-25 15:18:17,093 - INFO - Model loaded successfully
+2026-03-25 15:18:17,572 - DEBUG - Initializing WebSocket
+2026-03-25 15:18:17,572 - DEBUG - Validating WebSocket request
+2026-03-25 15:18:17,616 - INFO - 127.0.0.1 - - [2026-03-25 15:18:17] "GET /index.html HTTP/1.1" 200 2317 0.044542
+2026-03-25 15:18:17,666 - DEBUG - Initializing WebSocket
+2026-03-25 15:18:17,666 - DEBUG - Validating WebSocket request
+2026-03-25 15:18:17,668 - INFO - 127.0.0.1 - - [2026-03-25 15:18:17] "GET /eel.js HTTP/1.1" 200 6048 0.002000
+2026-03-25 15:18:17,673 - DEBUG - Initializing WebSocket
+2026-03-25 15:18:17,673 - DEBUG - Validating WebSocket request
+2026-03-25 15:18:17,678 - INFO - 127.0.0.1 - - [2026-03-25 15:18:17] "GET /script.js HTTP/1.1" 200 2991 0.005989
+2026-03-25 15:18:18,136 - DEBUG - Initializing WebSocket
+2026-03-25 15:18:18,137 - DEBUG - Validating WebSocket request
+2026-03-25 15:18:18,137 - DEBUG - Attempting to upgrade connection
+2026-03-25 15:18:18,138 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-25 15:18:23,582 - INFO - Processing image
+2026-03-25 15:18:35,815 - INFO - Processing image
+2026-03-25 15:18:41,766 - DEBUG - Closed WebSocket
+2026-03-25 15:18:41,766 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-25 15:18:41,766 - DEBUG - Closed WebSocket
+2026-03-25 15:21:36,086 - INFO - Application starting
+2026-03-25 15:21:36,271 - INFO - Model loaded successfully
+2026-03-25 15:21:36,749 - DEBUG - Initializing WebSocket
+2026-03-25 15:21:38,185 - DEBUG - Validating WebSocket request
+2026-03-25 15:21:38,189 - INFO - 127.0.0.1 - - [2026-03-25 15:21:38] "GET /index.html HTTP/1.1" 200 2317 1.440187
+2026-03-25 15:21:38,228 - DEBUG - Initializing WebSocket
+2026-03-25 15:21:38,229 - DEBUG - Validating WebSocket request
+2026-03-25 15:21:38,231 - INFO - 127.0.0.1 - - [2026-03-25 15:21:38] "GET /eel.js HTTP/1.1" 200 6048 0.002993
+2026-03-25 15:21:38,236 - DEBUG - Initializing WebSocket
+2026-03-25 15:21:38,237 - DEBUG - Validating WebSocket request
+2026-03-25 15:21:38,242 - INFO - 127.0.0.1 - - [2026-03-25 15:21:38] "GET /script.js HTTP/1.1" 200 2991 0.005985
+2026-03-25 15:21:38,701 - DEBUG - Initializing WebSocket
+2026-03-25 15:21:38,701 - DEBUG - Validating WebSocket request
+2026-03-25 15:21:38,701 - DEBUG - Attempting to upgrade connection
+2026-03-25 15:21:38,702 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-25 15:21:54,320 - INFO - Processing image
+2026-03-25 15:23:36,623 - DEBUG - Closed WebSocket
+2026-03-25 15:23:36,623 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-25 15:23:36,624 - DEBUG - Closed WebSocket
+2026-03-25 15:23:52,467 - INFO - Application starting
+2026-03-25 15:23:52,647 - INFO - Model loaded successfully
+2026-03-25 15:23:53,128 - DEBUG - Initializing WebSocket
+2026-03-25 15:23:53,129 - DEBUG - Validating WebSocket request
+2026-03-25 15:23:53,134 - INFO - 127.0.0.1 - - [2026-03-25 15:23:53] "GET /index.html HTTP/1.1" 200 2317 0.005988
+2026-03-25 15:23:53,184 - DEBUG - Initializing WebSocket
+2026-03-25 15:23:53,185 - DEBUG - Validating WebSocket request
+2026-03-25 15:23:53,188 - INFO - 127.0.0.1 - - [2026-03-25 15:23:53] "GET /eel.js HTTP/1.1" 200 6048 0.003991
+2026-03-25 15:23:53,192 - DEBUG - Initializing WebSocket
+2026-03-25 15:23:53,192 - DEBUG - Validating WebSocket request
+2026-03-25 15:23:53,196 - INFO - 127.0.0.1 - - [2026-03-25 15:23:53] "GET /script.js HTTP/1.1" 200 2991 0.004986
+2026-03-25 15:23:53,599 - DEBUG - Initializing WebSocket
+2026-03-25 15:23:53,600 - DEBUG - Validating WebSocket request
+2026-03-25 15:23:53,601 - DEBUG - Attempting to upgrade connection
+2026-03-25 15:23:53,602 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-25 15:24:07,015 - INFO - Processing image
+2026-03-25 15:25:24,719 - DEBUG - Closed WebSocket
+2026-03-25 15:25:24,720 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-25 15:25:24,720 - DEBUG - Closed WebSocket
+2026-03-26 07:35:39,649 - INFO - Application starting
+2026-03-26 07:35:40,452 - INFO - Model loaded successfully
+2026-03-26 07:35:41,650 - DEBUG - Initializing WebSocket
+2026-03-26 07:35:41,651 - DEBUG - Validating WebSocket request
+2026-03-26 07:35:41,653 - INFO - 127.0.0.1 - - [2026-03-26 07:35:41] "GET /index.html HTTP/1.1" 200 2317 0.002991
+2026-03-26 07:35:41,816 - DEBUG - Initializing WebSocket
+2026-03-26 07:35:41,817 - DEBUG - Validating WebSocket request
+2026-03-26 07:35:41,817 - INFO - 127.0.0.1 - - [2026-03-26 07:35:41] "GET /eel.js HTTP/1.1" 200 6048 0.000998
+2026-03-26 07:35:41,821 - DEBUG - Initializing WebSocket
+2026-03-26 07:35:41,821 - DEBUG - Validating WebSocket request
+2026-03-26 07:35:41,825 - INFO - 127.0.0.1 - - [2026-03-26 07:35:41] "GET /script.js HTTP/1.1" 200 2991 0.003989
+2026-03-26 07:35:41,908 - DEBUG - Initializing WebSocket
+2026-03-26 07:35:41,909 - DEBUG - Validating WebSocket request
+2026-03-26 07:35:41,924 - INFO - 127.0.0.1 - - [2026-03-26 07:35:41] "GET /favicon.ico HTTP/1.1" 404 882 0.015968
+2026-03-26 07:35:42,216 - DEBUG - Initializing WebSocket
+2026-03-26 07:35:42,216 - DEBUG - Validating WebSocket request
+2026-03-26 07:35:42,217 - DEBUG - Attempting to upgrade connection
+2026-03-26 07:35:42,217 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-26 07:36:44,961 - INFO - Processing image
+2026-03-26 07:36:52,423 - DEBUG - Closed WebSocket
+2026-03-26 07:36:52,424 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-26 07:36:52,424 - DEBUG - Closed WebSocket
+2026-03-26 07:37:03,110 - INFO - Application starting
+2026-03-26 07:37:03,369 - INFO - Model loaded successfully
+2026-03-26 07:37:03,874 - DEBUG - Initializing WebSocket
+2026-03-26 07:37:03,875 - DEBUG - Validating WebSocket request
+2026-03-26 07:37:03,880 - INFO - 127.0.0.1 - - [2026-03-26 07:37:03] "GET /index.html HTTP/1.1" 200 2317 0.005991
+2026-03-26 07:37:03,912 - DEBUG - Initializing WebSocket
+2026-03-26 07:37:03,912 - DEBUG - Validating WebSocket request
+2026-03-26 07:37:03,913 - INFO - 127.0.0.1 - - [2026-03-26 07:37:03] "GET /eel.js HTTP/1.1" 200 6048 0.000997
+2026-03-26 07:37:03,916 - DEBUG - Initializing WebSocket
+2026-03-26 07:37:03,916 - DEBUG - Validating WebSocket request
+2026-03-26 07:37:03,918 - INFO - 127.0.0.1 - - [2026-03-26 07:37:03] "GET /script.js HTTP/1.1" 200 2991 0.001995
+2026-03-26 07:37:04,275 - DEBUG - Initializing WebSocket
+2026-03-26 07:37:04,276 - DEBUG - Validating WebSocket request
+2026-03-26 07:37:04,276 - DEBUG - Attempting to upgrade connection
+2026-03-26 07:37:04,276 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-26 07:38:05,937 - INFO - Processing image
+2026-03-26 07:38:29,410 - INFO - Application starting
+2026-03-26 07:38:29,691 - INFO - Model loaded successfully
+2026-03-26 07:38:30,265 - DEBUG - Initializing WebSocket
+2026-03-26 07:38:30,265 - DEBUG - Validating WebSocket request
+2026-03-26 07:38:30,267 - INFO - 127.0.0.1 - - [2026-03-26 07:38:30] "GET /index.html HTTP/1.1" 200 2317 0.001991
+2026-03-26 07:38:30,292 - DEBUG - Initializing WebSocket
+2026-03-26 07:38:30,293 - DEBUG - Validating WebSocket request
+2026-03-26 07:38:30,293 - INFO - 127.0.0.1 - - [2026-03-26 07:38:30] "GET /eel.js HTTP/1.1" 200 6048 0.000996
+2026-03-26 07:38:30,294 - DEBUG - Initializing WebSocket
+2026-03-26 07:38:30,295 - DEBUG - Validating WebSocket request
+2026-03-26 07:38:30,296 - INFO - 127.0.0.1 - - [2026-03-26 07:38:30] "GET /script.js HTTP/1.1" 200 2991 0.001995
+2026-03-26 07:38:30,642 - DEBUG - Initializing WebSocket
+2026-03-26 07:38:30,643 - DEBUG - Validating WebSocket request
+2026-03-26 07:38:30,643 - DEBUG - Attempting to upgrade connection
+2026-03-26 07:38:30,643 - DEBUG - WebSocket request accepted, switching protocols
+2026-03-26 07:58:09,902 - DEBUG - Closed WebSocket
+2026-03-26 07:58:09,903 - DEBUG - Failed to write closing frame -> closing socket
+2026-03-26 07:58:09,904 - DEBUG - Closed WebSocket
